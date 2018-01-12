@@ -4,18 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Levitation</title>
-    <link href="https://fonts.googleapis.com/css?family=Lato:900" rel="stylesheet">
+    <title>Some Animations</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
     <style>
         html, body{
             background: #F2CC67;
             font-family: Lato, 'sans serif';
-            color: #5F051F;
+            color: white;
             width: 98%;
             height: 95%;
         }
 
-        .box, .box2, .box3{
+        h1 {
+            text-align: center;
+            font-weight: 400;
+        }
+
+        .container > div{
             display: inline-block;
             height: 70px;
             margin: auto;
@@ -79,6 +84,7 @@
         .text1, .text2, .text3{
             position: relative;
             font-size: 190%;
+            font-weight: 900;
             top: 20%;
             transform: rotateX(20deg);
         }
@@ -121,19 +127,22 @@
     </style>
 </head>
 <body>
-    <div class="box">
-        <div class="text1">
-            Believe
+    <div class="container">
+        <h1>Try Hovering</h1>
+        <div class="box">
+            <div class="text1">
+                Halt!
+            </div>
         </div>
-    </div>
-    <div class="box2">
-        <div class="text2">
-            Higher
+        <div class="box2">
+            <div class="text2">
+                Higher
+            </div>
         </div>
-    </div>
-    <div class="box3">
-        <div class="text3">
-            Lower
+        <div class="box3">
+            <div class="text3">
+                Lower
+            </div>
         </div>
     </div>
 </body>

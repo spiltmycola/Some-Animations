@@ -11,7 +11,7 @@
             background: #F2CC67;
             font-family: Lato, 'sans serif';
             color: white;
-            width: 98%;
+            width: 96%;
             height: 95%;
         }
 
@@ -20,13 +20,22 @@
             font-weight: 400;
         }
 
-        .container > div{
+        .displays-container{
+            display: grid;
+            grid-template-rows: 1fr;
+        }
+
+        .boxes-container{
+            text-align: center;
+            transform: translateY(240px);
+        }
+
+        .boxes-container > div{
             display: inline-block;
             height: 70px;
-            margin: auto;
-            position: absolute;
+            margin: 20px;
+            position: relative;
             text-align: center;
-            top: 280px;
             width: 180px;
         }
 
@@ -34,7 +43,6 @@
             animation: levitate 3.5s both infinite;
             background: #F38264;
             border-bottom: 10px solid rgb(212, 104, 74);
-            left: 24%;
         }
 
         .box:hover{
@@ -48,7 +56,6 @@
             -moz-box-shadow: 3px 0px 0px 0px rgba(212,172,70,1);
             box-shadow: 3px 0px 0px 0px rgba(212,172,70,1);
             border-bottom: 10px solid rgb(97, 168, 149);
-            left: 42%;
             transition: box-shadow 2.5s, transform 2.5s;
         }
 
@@ -67,7 +74,6 @@
             -moz-box-shadow: 3px 0px 0px 0px rgba(212,172,70,1);
             box-shadow: 3px 0px 0px 0px rgba(212,172,70,1);
             border-bottom: 10px solid rgb(146, 127, 78);
-            left: 58%;
             transition: box-shadow 0.8s, border-bottom 0.8s, transform 0.8s;
         }
 
@@ -126,21 +132,23 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Try Hovering</h1>
-        <div class="box">
-            <div class="text1">
-                Halt!
+    <h1>Try Hovering</h1>
+    <div class="displays-container">
+        <div class="boxes-container">
+            <div class="box">
+                <div class="text1">
+                    Halt!
+                </div>
             </div>
-        </div>
-        <div class="box2">
-            <div class="text2">
-                Higher
+            <div class="box2">
+                <div class="text2">
+                    Higher
+                </div>
             </div>
-        </div>
-        <div class="box3">
-            <div class="text3">
-                Lower
+            <div class="box3">
+                <div class="text3">
+                    Lower
+                </div>
             </div>
         </div>
     </div>

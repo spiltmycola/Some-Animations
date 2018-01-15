@@ -18,6 +18,31 @@ h1 {
 }
 
 /*
+    ██╗  ██╗███████╗ █████╗ ██████╗ ██╗     ██╗███╗   ██╗███████╗
+    ██║  ██║██╔════╝██╔══██╗██╔══██╗██║     ██║████╗  ██║██╔════╝
+    ███████║█████╗  ███████║██║  ██║██║     ██║██╔██╗ ██║█████╗  
+    ██╔══██║██╔══╝  ██╔══██║██║  ██║██║     ██║██║╚██╗██║██╔══╝  
+    ██║  ██║███████╗██║  ██║██████╔╝███████╗██║██║ ╚████║███████╗
+    ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═════╝ ╚══════╝╚═╝╚═╝  ╚═══╝╚══════╝
+                                                                 
+*/
+
+.headline-bar{
+    animation: drive 40s both infinite linear;
+    background: rgb(179, 70, 56);
+    display: inline;
+    height: 20px;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.headline-text{
+    display: inline-block;
+}
+
+/*
     ███████╗██████╗ ██╗███╗   ██╗███╗   ██╗███████╗██████╗ 
     ██╔════╝██╔══██╗██║████╗  ██║████╗  ██║██╔════╝██╔══██╗
     ███████╗██████╔╝██║██╔██╗ ██║██╔██╗ ██║█████╗  ██████╔╝
@@ -44,12 +69,20 @@ h1 {
     width: 150px;
 }
 
-.spinner:hover .front{
+.spinner:hover .front, .front-toback{
     animation: twirl 1.5s linear forwards;
 }
 
-.spinner:hover .back{
+.spinner:hover .back, .back-toback{
     animation: twirl-back 1.5s linear forwards;
+}
+
+.front-tofront{
+    animation: twirl 1.5s linear reverse forwards;
+}
+
+.back-tofront{
+    animation: twirl-back 1.5s linear reverse forwards;
 }
 
 .front{
@@ -71,6 +104,12 @@ h1 {
 @keyframes twirl{
     0%{
         transform: rotateY(0deg);
+    }
+    2.5%{
+        transform: rotateY(4deg);
+    }
+    5%{
+        transform: rotateY(17deg);
     }
     10%{
         transform: rotateY(45deg);
@@ -106,6 +145,12 @@ h1 {
     }
     65%{
         transform: rotateY(315deg);
+    }
+    70%{
+        transform: rotateY(343deg);
+    }
+    72.5%{
+        transform: rotateY(356deg);
     }
     75%{
         animation-timing-function: steps(1, end);
